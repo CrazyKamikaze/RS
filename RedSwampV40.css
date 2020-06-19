@@ -165,6 +165,22 @@ button.buttonWrapper-1ZmCpA.button-38aScr.lookBlank-3eh9lL.colorBrand-3pXr91.gro
     color:#fff !important;
 }
 
+/* Invites */
+.wrapper-35wsBm,
+.invite-18yqGF {
+    background:rgba(0,0,0,0.5) !important;
+    border:none !important;
+    box-shadow:0px 0px 5px black;
+    transition: 150ms linear all;
+}
+.wrapper-35wsBm:hover,
+.invite-18yqGF:hover {
+    transform: scale(1.03) !important;
+}
+.invite-18yqGF .lookFilled-1Gx00P.colorGreen-29iAKY {
+  background: linear-gradient(150deg, #3ecc9c, #185a9d) !important;
+}
+
 /* server channels grey text color */
 .nameDefaultText-24KCy5, .nameDefaultVoice-3WUH7s, .nameLockedText-3pqQcL, .nameLockedVoice-26MhB1 {
     color: #8c8f92;
