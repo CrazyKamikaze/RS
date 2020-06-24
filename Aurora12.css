@@ -1513,108 +1513,6 @@ body #app-mount .channel-2QD9_O.selected-1HYmZZ a {
 	display:none;
 }
 
-.acronym-2mOFsV {
-    transition:250ms ease background;
-    background:rgba(0,0,0,0.5) !important;
-}
-.acronym-2mOFsV:hover {
-    background:var(--main-color) !important;
-}
-.listItem-2P_4kh {
-    margin-left:10px;
-}
-.pill-31IEus {
-    width:30px;
-    margin-left:-10px;
-}
-.item-2hkk8m {
-    margin-left:6px;
-    border-radius:50px;
-    width:8px !important;
-    background:var(--main-color);
-}
-.guildSeparator-3s64Iy {
-    display:none;
-}
-.homeIcon-tEMBK1 path {
-    display:none;
-}
-.button-OhfaWu {
-    background:transparent !important;
-}
-.circleIconButton-jET_ig {
-    margin:0 !important;
-}
-/*5.b. Add/Create Guilds Button*/
-.circleIconButton-jET_ig {
-    border: none;
-    background-image: linear-gradient(45deg, var(--gradient1), var(--gradient2)) !important;
-    color: white;
-}
-/*5.c. Unread and Selected Indicators*/
-.unread-qLkInr:before {
-  background:var(--hover-color) !important;
-}
-.guildsWrapper-5TJh6A .guilds-1q_RqH .guild-1EfMGQ.unread-qLkInr:before {
-  box-shadow: 0 0 15px var(--hover-color);
-  transition: all .2s ease;
-}
-.guildsWrapper-5TJh6A .guilds-1q_RqH .guild-1EfMGQ.selected-ML3OIq:before {
-  box-shadow:0 0 12px black;
-}
-.guildsWrapper-5TJh6A .guilds-1q_RqH .guild-1EfMGQ.unread-qLkInr:hover:before,
-.guildsWrapper-5TJh6A .guilds-1q_RqH .guild-1EfMGQ.selected-ML3OIq:before {
-  border-radius: 20px;
-  height: 40px;
-  margin-top: -20px;
-}
-
-.guild-1EfMGQ.selected-ML3OIq:before,
-.guild-1EfMGQ.unread-qLkInr:before {
-    border-radius:5px !important;
-    width:8px !important;
-}
-.guild-1EfMGQ:first-child.selected-ML3OIq:before {
-    display:none !important;
-}
-.selected-ML3OIq:before {
-	background:var(--main-color) !important;
-}
-
-/*5.d. Home Icon*/
-.wrapper-232cHJ {
-	background:var(--main-color) !important;
-}
-.homeIcon-1FoKUJ defs,
-.homeIcon-1FoKUJ g {
-	display: none;
-}
-.guildsWrapper-5TJh6A .guilds-1q_RqH>.guild-1EfMGQ:first-child .guildInner-3DSoA4 {
-  border-radius: 0px !important;
-}
-.homeIcon-1FoKUJ {
-	background: var(--main-color);
-	-webkit-mask: url('');
-	-webkit-mask-size: 95%;
-	-webkit-mask-repeat: no-repeat;
-	-webkit-mask-position: center;
-	transition:250ms all ease;
-}
-
-/*5.e. Tooltips*/
-.da-tooltip {
-    background: var(--main-color) !important;
-    box-shadow:0px 0px 20px rgba(0,0,0,0.5) !important;
-}
-@keyframes fadetop {
-	0% {
-		opacity: 0;
-		transform: translateY(-50%);
-	}
-	100% {
-		opacity: 0.9;
-		transform:none;
-	}
 }
 @keyframes faderight {
 	0% {
@@ -1762,11 +1660,11 @@ body #app-mount .channel-2QD9_O.selected-1HYmZZ a {
 
 /*5.d. Canary HomeIcon*/
 .wrapper-232cHJ {
-	background:var(--main-color) !important;
+  background:var(--main-color) !important;
 }
 .homeIcon-tEMBK1 defs,
 .homeIcon-tEMBK1 g {
-	display: none;
+  display: none;
 }
 #app-mount .wrapper-1Rf91z .guilds-1q_RqH>.container-2td-dC:first-child .wrapper-2lTRaf {
   border-radius: 0px !important;
@@ -1774,11 +1672,12 @@ body #app-mount .channel-2QD9_O.selected-1HYmZZ a {
   box-shadow:none !important;
 }
 .homeIcon-tEMBK1 {
-	background-image: url('https://i.imgur.com/bISZnLw.png');
-	background-size: 120px;
-	background-repeat: no-repeat;
-	background-position: center;
-	transition:250ms all ease;
+  background: var(--main-color);
+  -webkit-mask: url('');
+  -webkit-mask-size: 30px;
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  transition:250ms all ease;
 }
 
 /*============== END OF SECTION ============== */
