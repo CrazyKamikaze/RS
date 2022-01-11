@@ -1,0 +1,451 @@
++@import url(https://mwittrien.github.io/BetterDiscordAddons/Themes/_res/ThemeDevBadge.css);
+
+:root {
+	--accentcolor:					88,101,242;
+	--accentcolor2:					255,115,250;
+	--linkcolor:					0,176,244;
+	--dangercolor: 					237,66,69;
+	
+	--accentcolor-hover:			rgb(var(--accentcolor)) linear-gradient(0deg, rgba(255,255,255,.15), rgba(255,255,255,.15));
+	--accentcolor-active:			rgb(var(--accentcolor)) linear-gradient(0deg, rgba(255,255,255,.3), rgba(255,255,255,.3));
+	--accentcolor2-hover:			rgb(var(--accentcolor2)) linear-gradient(0deg, rgba(255,255,255,.15), rgba(255,255,255,.15));
+	--accentcolor2-active:			rgb(var(--accentcolor2)) linear-gradient(0deg, rgba(255,255,255,.3), rgba(255,255,255,.3));
+	
+	--bdfdb-blurple:				rgb(var(--accentcolor)) !important;
+	--bd-blue:						rgb(var(--accentcolor)) !important;
+	--bd-blue-hover:				var(--accentcolor-hover) !important;
+	--bd-blue-active:				var(--accentcolor-active) !important;
+	--blurple:						rgb(var(--accentcolor)) !important;
+}
+.theme-light {
+	--logo-primary: rgb(var(--accentcolor));
+}
+.theme-dark, .theme-light {
+	--text-brand: rgb(var(--accentcolor));
+	--text-link: rgb(var(--linkcolor));
+	--text-link-low-saturation: rgb(var(--linkcolor));
+	--info-help-background: rgba(var(--linkcolor),.1);
+	--info-help-foreground: rgb(var(--linkcolor));
+	--info-help-text: #fff;
+	--focus-primary: rgb(var(--linkcolor));
+	--control-brand-foreground: rgb(var(--accentcolor)) !important;
+	--control-brand-foreground-new: rgb(var(--accentcolor)) !important;
+	--brand-experiment-100: #fdfdfd !important;
+	--brand-experiment-130: #f2f2f2 !important;
+	--brand-experiment-160: #ebebeb !important;
+	--brand-experiment-200: #e3e3e3 !important;
+	--brand-experiment-230: #dadada !important;
+	--brand-experiment-260: #d1d1d1 !important;
+	--brand-experiment-300: #c7c7c7 !important;
+	--brand-experiment-330: rgb(var(--accentcolor)) !important;
+	--brand-experiment-360: rgb(var(--accentcolor)) !important;
+	--brand-experiment-400: rgb(var(--accentcolor)) !important;
+	--brand-experiment-430: rgb(var(--accentcolor)) !important;
+	--brand-experiment-460: rgb(var(--accentcolor)) !important;
+	--brand-experiment: rgb(var(--accentcolor)) !important;
+	--brand-experiment-500: rgb(var(--accentcolor)) !important;
+	--brand-experiment-530: rgb(var(--accentcolor)) !important;
+	--brand-experiment-560: rgb(var(--accentcolor)) !important;
+	--brand-experiment-600: rgb(var(--accentcolor)) !important;
+	--brand-experiment-630: rgb(var(--accentcolor)) !important;
+	--brand-experiment-660: rgb(var(--accentcolor)) !important;
+	--brand-experiment-700: #323232 !important;
+	--brand-experiment-730: #2b2b2b !important;
+	--brand-experiment-760: #272727 !important;
+	--brand-experiment-800: #222222 !important;
+	--brand-experiment-830: #1a1a1a !important;
+	--brand-experiment-860: #111111 !important;
+	--brand-experiment-900: #0b0b0b !important;
+	--brand-experiment-05a: rgba(var(--accentcolor),.05) !important;
+	--brand-experiment-10a: rgba(var(--accentcolor),.1) !important;
+	--brand-experiment-15a: rgba(var(--accentcolor),.15) !important;
+	--brand-experiment-20a: rgba(var(--accentcolor),.2) !important;
+	--brand-experiment-25a: rgba(var(--accentcolor),.25) !important;
+	--brand-experiment-30a: rgba(var(--accentcolor),.3) !important;
+	--brand-experiment-35a: rgba(var(--accentcolor),.35) !important;
+	--brand-experiment-40a: rgba(var(--accentcolor),.4) !important;
+	--brand-experiment-45a: rgba(var(--accentcolor),.45) !important;
+	--brand-experiment-50a: rgba(var(--accentcolor),.5) !important;
+	--brand-experiment-55a: rgba(var(--accentcolor),.55) !important;
+	--brand-experiment-60a: rgba(var(--accentcolor),.6) !important;
+	--brand-experiment-65a: rgba(var(--accentcolor),.65) !important;
+	--brand-experiment-70a: rgba(var(--accentcolor),.7) !important;
+	--brand-experiment-75a: rgba(var(--accentcolor),.75) !important;
+	--brand-experiment-80a: rgba(var(--accentcolor),.8) !important;
+	--brand-experiment-85a: rgba(var(--accentcolor),.85) !important;
+	--brand-experiment-90a: rgba(var(--accentcolor),.9) !important;
+	--brand-experiment-95a: rgba(var(--accentcolor),.95) !important;
+}
+
+
+/* ~~~~		0.		TABLE OF CONTENTS				~~~~ */
+/*
+	1.	GUILDLIST
+	2.	CHANNELLIST
+	3.	CHAT
+		1.	MESSAGES
+		2.	TEXTAREA
+		3.	AUTOCOMPLETEMENU
+		4.	MEMBERLIST
+		5.	SEARCHPAGE
+		6.	CALL
+	4.	PEOPLES
+	5.	STORE/NITRO
+	6.	LIBRARY
+	7.	DISCOVERY
+	8.	USERSETTINGS
+	9.	GUILDSETTINGS
+	10.	MODALS
+		1.	USERMODAL
+		2.	GUILDADD/CREATION
+		3.	REGIONSELECTMODAL
+		4.	UPLOADMODAL
+		5.	KEYBOARDSHORTCUTSMODAL
+		6.	LOGINSCREEN
+		7.	DOWNLOADAPPMODAL
+		8.	GUILDBOOSTMODAL
+		9.	ADDGUILDBOOSTMODAL
+		10.	STREAMSETTINGSMODAL
+		11.	DISPATCHERRORMODAL
+		12.	CHANGELOGMODAL
+		13.	SCREENSHAREMODAL
+		14.	PHONEVERIFICATIONMODAL
+		15.	CUSTOMSTATUSMODAL
+		16.	DISCOVERYENTRYMODAL
+		17.	NICKNAMEMODAL
+		18.	NITROFEATUREMODAL
+	11.	POPOUTS
+		1.	CONTEXTMENU
+		2.	USERPOPOUT
+		3.	EMOJIPICKER
+		4.	PINS/MENTIONS
+		5.	SEARCHPOPOUT
+	12.	GENERAL
+		1.	TEXT
+		2.	BUTTONS
+		3.	INPUTS
+		4.	TAGS
+		5.	ICONS
+		6.	SCROLLBARS
+		7.	NOTIFICATIONBAR
+		8.	TOOLTIPS
+		9.	TOASTS
+	13.	BDSUPPORT
+	14.	POWERCORDSUPPORT
+	15.	PLUGINSUPPORT
+		1.	HIDEUTILS
+		2.	READALLNOTIFICATIONSBUTTON
+		3.	SERVERSEARCH
+		4.	CHANNELTABS
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ~~~~		13.		BDSUPPORT						~~~~ */
+
+#bd-pub-button {
+	color: var(--text-normal);
+	transition: background-color .15s ease-out, color .15s ease-out;
+}
+#bd-pub-button:hover {
+	background-color: rgb(var(--accentcolor));
+}
+#bd-pub-button:active {
+	background: var(--accentcolor-hover);
+}
+#pubslayer button:hover {
+	background: var(--accentcolor-hover);
+}
+#pubslayer button:active {
+	background: var(--accentcolor-active);
+}
+.bd-server-card.bd-server-card-pinned::after {
+	background: var(--bd-blue);
+}
+
+.bd-modal-wrapper .footer button {
+	background: var(--bd-blue);
+}
+.bd-modal-wrapper .footer button:hover {
+	background: var(--accentcolor-hover);
+}
+.bd-modal-wrapper .footer button:active {
+	background: var(--accentcolor-active);
+}
+.bd-modal-wrapper .error-link {
+	color: var(--bd-blue);
+}
+
+.bd-pfbtn {
+	background: var(--bd-blue);
+}
+.bd-pfbtn:hover {
+	background: var(--accentcolor-hover);
+}
+.bd-pfbtn:active {
+	background: var(--accentcolor-active);
+}
+
+.bd-button {
+	background: var(--bd-blue);
+}
+.bd-button:hover {
+	background: var(--accentcolor-hover);
+}
+.bd-button:active {
+	background: var(--accentcolor-active);
+}
+
+.bd-addon-views .bd-view-button.selected {
+	background: var(--bd-blue);
+}
+
+.bd-server-tag {
+	background: var(--bd-blue);
+}
+
+.bd-switch input:checked + .bd-switch-body {
+	--switch-color: rgba(var(--accentcolor), 0.8);
+	background-color: rgba(var(--accentcolor), 0.8) !important;
+}
+.bd-switch input:active + .bd-switch-body {
+	--switch-color: rgba(var(--accentcolor));
+}
+.bd-switch input:checked:hover + .bd-switch-body {
+	background: var(--accentcolor-hover) !important;
+}
+.bd-switch input:checked:active + .bd-switch-body {
+	--switch-color: rgb(var(--accentcolor));
+	background: var(--accentcolor-active) !important;
+}
+
+html .monaco-editor .find-widget .monaco-inputbox.synthetic-focus {
+	outline-color: rgb(var(--accentcolor));
+}
+html .monaco-editor .monaco-editor-hover a {
+	color: rgb(var(--accentcolor));
+}
+html .monaco-editor [class*="arrow-decoration"] {
+	border-bottom-color: rgb(var(--accentcolor));
+}
+html .monaco-editor .focused .selected-text {
+	background-color: rgb(var(--accentcolor));
+}
+
+html .monaco-tree[class*="monaco-tree-instance"].focused .monaco-tree-rows > .monaco-tree-row.focused:not(.highlighted) {
+	background-color: rgb(var(--accentcolor));
+	color: #ffffff;
+}
+html .monaco-tree[class*="monaco-tree-instance"].focused .monaco-tree-rows > .monaco-tree-row.focused:not(.highlighted) .results-group {
+	color: #ffffff !important;
+}
+
+html .monaco-editor [style*="background-color: rgb(0, 122, 204)"],
+html .monaco-editor [style*="background: rgb(0, 122, 204)"],
+html .monaco-editor [style*="background-color: rgb(14, 122, 192)"],
+html .monaco-editor [style*="background: rgb(14, 122, 192)"],
+html .monaco-editor [style*="background-color: rgb(14, 99, 156)"],
+html .monaco-editor [style*="background: rgb(14, 99, 156)"],
+html .monaco-editor [style*="background-color: rgb(9, 71, 113)"],
+html .monaco-editor [style*="background: rgb(9, 71, 113)"] {
+	background: rgb(var(--accentcolor)) !important;
+}
+html .monaco-editor [style*="background-color: rgba(0, 122, 204, 0.9)"],
+html .monaco-editor [style*="background: rgba(0, 122, 204, 0.9)"],
+html .monaco-editor [style*="background-color: rgba(14, 122, 192, 0.9)"],
+html .monaco-editor [style*="background: rgba(14, 122, 192, 0.9)"],
+html .monaco-editor [style*="background-color: rgba(14, 99, 156, 0.9)"],
+html .monaco-editor [style*="background: rgba(14, 99, 156, 0.9)"],
+html .monaco-editor [style*="background-color: rgba(9, 71, 113, 0.9)"],
+html .monaco-editor [style*="background: rgba(9, 71, 113, 0.9)"] {
+	background: rgba(var(--accentcolor), 0.9) !important;
+}
+html .monaco-editor [style*="background-color: rgba(0, 122, 204, 0.8)"],
+html .monaco-editor [style*="background: rgba(0, 122, 204, 0.8)"],
+html .monaco-editor [style*="background-color: rgba(14, 122, 192, 0.8)"],
+html .monaco-editor [style*="background: rgba(14, 122, 192, 0.8)"],
+html .monaco-editor [style*="background-color: rgba(14, 99, 156, 0.8)"],
+html .monaco-editor [style*="background: rgba(14, 99, 156, 0.8)"],
+html .monaco-editor [style*="background-color: rgba(9, 71, 113, 0.8)"],
+html .monaco-editor [style*="background: rgba(9, 71, 113, 0.8)"] {
+	background: rgba(var(--accentcolor), 0.8) !important;
+}
+html .monaco-editor [style*="background-color: rgba(0, 122, 204, 0.7)"],
+html .monaco-editor [style*="background: rgba(0, 122, 204, 0.7)"],
+html .monaco-editor [style*="background-color: rgba(14, 122, 192, 0.7)"],
+html .monaco-editor [style*="background: rgba(14, 122, 192, 0.7)"],
+html .monaco-editor [style*="background-color: rgba(14, 99, 156, 0.7)"],
+html .monaco-editor [style*="background: rgba(14, 99, 156, 0.7)"],
+html .monaco-editor [style*="background-color: rgba(9, 71, 113, 0.7)"],
+html .monaco-editor [style*="background: rgba(9, 71, 113, 0.7)"] {
+	background: rgba(var(--accentcolor), 0.7) !important;
+}
+html .monaco-editor [style*="background-color: rgba(0, 122, 204, 0.6)"],
+html .monaco-editor [style*="background: rgba(0, 122, 204, 0.6)"],
+html .monaco-editor [style*="background-color: rgba(14, 122, 192, 0.6)"],
+html .monaco-editor [style*="background: rgba(14, 122, 192, 0.6)"],
+html .monaco-editor [style*="background-color: rgba(14, 99, 156, 0.6)"],
+html .monaco-editor [style*="background: rgba(14, 99, 156, 0.6)"],
+html .monaco-editor [style*="background-color: rgba(9, 71, 113, 0.6)"],
+html .monaco-editor [style*="background: rgba(9, 71, 113, 0.6)"] {
+	background: rgba(var(--accentcolor), 0.6) !important;
+}
+html .monaco-editor [style*="background-color: rgba(0, 122, 204, 0.5)"],
+html .monaco-editor [style*="background: rgba(0, 122, 204, 0.5)"],
+html .monaco-editor [style*="background-color: rgba(14, 122, 192, 0.5)"],
+html .monaco-editor [style*="background: rgba(14, 122, 192, 0.5)"],
+html .monaco-editor [style*="background-color: rgba(14, 99, 156, 0.5)"],
+html .monaco-editor [style*="background: rgba(14, 99, 156, 0.5)"],
+html .monaco-editor [style*="background-color: rgba(9, 71, 113, 0.5)"],
+html .monaco-editor [style*="background: rgba(9, 71, 113, 0.5)"] {
+	background: rgba(var(--accentcolor), 0.5) !important;
+}
+html .monaco-editor [style*="background-color: rgba(0, 122, 204, 0.4)"],
+html .monaco-editor [style*="background: rgba(0, 122, 204, 0.4)"],
+html .monaco-editor [style*="background-color: rgba(14, 122, 192, 0.4)"],
+html .monaco-editor [style*="background: rgba(14, 122, 192, 0.4)"],
+html .monaco-editor [style*="background-color: rgba(14, 99, 156, 0.4)"],
+html .monaco-editor [style*="background: rgba(14, 99, 156, 0.4)"],
+html .monaco-editor [style*="background-color: rgba(9, 71, 113, 0.4)"],
+html .monaco-editor [style*="background: rgba(9, 71, 113, 0.4)"] {
+	background: rgba(var(--accentcolor), 0.4) !important;
+}
+html .monaco-editor [style*="background-color: rgba(0, 122, 204, 0.3)"],
+html .monaco-editor [style*="background: rgba(0, 122, 204, 0.3)"],
+html .monaco-editor [style*="background-color: rgba(14, 122, 192, 0.3)"],
+html .monaco-editor [style*="background: rgba(14, 122, 192, 0.3)"],
+html .monaco-editor [style*="background-color: rgba(14, 99, 156, 0.3)"],
+html .monaco-editor [style*="background: rgba(14, 99, 156, 0.3)"],
+html .monaco-editor [style*="background-color: rgba(9, 71, 113, 0.3)"],
+html .monaco-editor [style*="background: rgba(9, 71, 113, 0.3)"] {
+	background: rgba(var(--accentcolor), 0.3) !important;
+}
+html .monaco-editor [style*="background-color: rgba(0, 122, 204, 0.2)"],
+html .monaco-editor [style*="background: rgba(0, 122, 204, 0.2)"],
+html .monaco-editor [style*="background-color: rgba(14, 122, 192, 0.2)"],
+html .monaco-editor [style*="background: rgba(14, 122, 192, 0.2)"],
+html .monaco-editor [style*="background-color: rgba(14, 99, 156, 0.2)"],
+html .monaco-editor [style*="background: rgba(14, 99, 156, 0.2)"],
+html .monaco-editor [style*="background-color: rgba(9, 71, 113, 0.2)"],
+html .monaco-editor [style*="background: rgba(9, 71, 113, 0.2)"] {
+	background: rgba(var(--accentcolor), 0.2) !important;
+}
+html .monaco-editor [style*="background-color: rgba(0, 122, 204, 0.1)"],
+html .monaco-editor [style*="background: rgba(0, 122, 204, 0.1)"],
+html .monaco-editor [style*="background-color: rgba(14, 122, 192, 0.1)"],
+html .monaco-editor [style*="background: rgba(14, 122, 192, 0.1)"],
+html .monaco-editor [style*="background-color: rgba(14, 99, 156, 0.1)"],
+html .monaco-editor [style*="background: rgba(14, 99, 156, 0.1)"],
+html .monaco-editor [style*="background-color: rgba(9, 71, 113, 0.1)"],
+html .monaco-editor [style*="background: rgba(9, 71, 113, 0.1)"] {
+	background: rgba(var(--accentcolor), 0.1) !important;
+}
+html .monaco-editor [style*="border-color: rgb(0, 122, 204)"],
+html .monaco-editor [style*="border-color: rgb(14, 122, 192)"],
+html .monaco-editor [style*="border-color: rgb(14, 99, 156)"],
+html .monaco-editor [style*="border-color: rgb(9, 71, 113)"] {
+	border-color: rgb(var(--accentcolor)) !important;
+}
+html .monaco-editor [style*="border-top-color: rgb(0, 122, 204)"],
+html .monaco-editor [style*="border-top-color: rgb(14, 122, 192)"],
+html .monaco-editor [style*="border-top-color: rgb(14, 99, 156)"],
+html .monaco-editor [style*="border-top-color: rgb(9, 71, 113)"] {
+	border-top-color: rgb(var(--accentcolor)) !important;
+}
+html .monaco-editor [style*="border-right-color: rgb(0, 122, 204)"],
+html .monaco-editor [style*="border-right-color: rgb(14, 122, 192)"],
+html .monaco-editor [style*="border-right-color: rgb(14, 99, 156)"],
+html .monaco-editor [style*="border-right-color: rgb(9, 71, 113)"] {
+	border-right-color: rgb(var(--accentcolor)) !important;
+}
+html .monaco-editor [style*="border-bottom-color: rgb(0, 122, 204)"],
+html .monaco-editor [style*="border-bottom-color: rgb(14, 122, 192)"],
+html .monaco-editor [style*="border-bottom-color: rgb(14, 99, 156)"],
+html .monaco-editor [style*="border-bottom-color: rgb(9, 71, 113)"] {
+	border-bottom-color: rgb(var(--accentcolor)) !important;
+}
+html .monaco-editor [style*="border-left-color: rgb(0, 122, 204)"],
+html .monaco-editor [style*="border-left-color: rgb(14, 122, 192)"],
+html .monaco-editor [style*="border-left-color: rgb(14, 99, 156)"],
+html .monaco-editor [style*="border-left-color: rgb(9, 71, 113)"] {
+	border-left-color: rgb(var(--accentcolor)) !important;
+}
+
+.embedFull-1HGV2S[style*="border-color: rgb(62, 130, 229)"],
+.embedFull-1HGV2S[style*="border-color: rgb(62, 130, 226)"] {
+	border-color: rgb(var(--accentcolor)) !important;
+}
+
+
+/* ~~~~		14.		POWERCORDSUPPORT				~~~~ */
+
+html .powercord-toast[data-toast-type=info] .icon {
+	color: rgb(var(--accentcolor));
+}
+html .powercord-toast .progressBar-1T6LYX {
+	background-color: rgb(var(--accentcolor));
+}
+
+html .powercord-updater .debug-info b {
+	color: rgb(var(--accentcolor));
+}
+
+
+/* ~~~~		15.		PLUGINSUPPORT					~~~~ */
+
+
+/* ----		15.1.	HIDEUTILS						---- */
+
+#HideUtils-Settings button {
+	background-color: rgb(var(--accentcolor)) !important;
+}
+
+/* ----		15.2.	READALLNOTIFICATIONSBUTTON		---- */
+
+.wrapper-3kah-n:active .childWrapper-1j_1ub.button-Jt-tIg {
+	background: var(--accentcolor-hover);
+}
+
+/* ----		15.3.	SERVERSEARCH					---- */
+
+#server-search .wrapper-28eC3z {
+    background-color: var(--background-primary) !important;
+    transition: background-color .16s ease-out;
+}
+#server-search .wrapper-28eC3z:hover {
+	background-color: rgb(var(--accentcolor)) !important;
+}
+#server-search .wrapper-28eC3z [fill="white"] {
+    fill: var(--header-primary);
+}
+#server-search .wrapper-28eC3z:hover [fill="white"] {
+    fill: #fff;
+}
+#server-search .circleIconButton-1QV--U {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+    width: 48px;
+    height: 48px;
+}
+
+/* ----		15.4.	CHANNELTABS						---- */
+
+.channelTabs-unreadBadge:not(.channelTabs-noUnread) {
+	background-color: rgb(var(--accentcolor)) !important;
+}
